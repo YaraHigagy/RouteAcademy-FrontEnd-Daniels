@@ -1,0 +1,338 @@
+/* Font Awesome Library Icon stylesheet */
+@import url(all.min.css);
+/* Bootstrap stylesheet */
+@import url(bootstrap.min.css);
+/* General Styles stylesheet */
+@import url(styles.css);
+/* Keyframes Styles stylesheet */
+@import url(keyframes.css);
+
+
+/* ========== Header ========== */
+header .navbar {
+    --bs-navbar-brand-font-size: 1.125rem;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+    --bs-navbar-brand-padding-y: 1.25rem;
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.563rem;
+    --bs-navbar-toggler-padding-x: 0.625rem;
+    --bs-navbar-toggler-font-size: 1.125rem;
+    --bs-navbar-toggler-focus-width: 0;
+}
+header .navbar-dark {
+    --bs-navbar-toggler-border-color: transparent;
+    --bs-navbar-active-color: var(--text-darkish-sub-1);
+    --bs-navbar-color: var(--text-darkish-sub-1);
+    --bs-navbar-hover-color: var(--text-darkish-sub-1);
+}
+header .navbar-nav {
+    --bs-link-color: var(--text-darkish-sub-1);
+    --bs-link-hover-color: var(--text-darkish-sub-1);
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0;
+    --bs-nav-link-font-size: 14px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    align-items: center;
+}
+header .collapse:has(a.nav-link.active) {display: hidden;}
+header a.nav-link,
+header a.nav-link.active {
+    color: var(--text-darkish-sub-1);
+    width: fit-content;
+    position: relative;
+}
+header .nav-link::before {
+    content: '';
+    position: absolute;
+    background-color: var(--text-darkish-sub-1);
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transition: var(--animation-duration) ease;
+}
+header .nav-link.active::before {width: 100%;}
+
+header:has(.navbar>div>a:not(.active)) .navbar {
+    --color: var(--text-darkish-sub-1);
+
+    --bs-navbar-brand-color:#fff;
+    --bs-navbar-brand-hover-color:#fff;
+
+    transition: var(--animation-duration) ease;
+}
+header:has(.navbar>div>a:not(.active)) .navbar-dark {
+    --bs-navbar-active-color: var(--color);
+    --bs-navbar-color: var(--color);
+    --bs-navbar-hover-color: var(--color);
+}
+header:has(.navbar>div>a:not(.active)) .navbar-nav {
+    --bs-link-color: var(--color);
+    --bs-link-hover-color: var(--color);
+}
+header:has(.navbar>div>a:not(.active)) a.nav-link,
+header:has(.navbar>div>a:not(.active)) a.nav-link.active {
+    color: var(--color);
+}
+header:has(.navbar>div>a:not(.active)) .nav-link::before {
+    background-color: var(--color);
+}
+
+header:has(.navbar>div>a.active) .navbar {
+    --color: var(--text-darkish-sub-1);
+
+    --bs-navbar-brand-color: var(--text-darkish);
+    --bs-navbar-brand-hover-color: var(--text-darkish);
+
+    background-color: #fff;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+    padding: 0 0 15px;
+}
+
+/* ========== Hero Section ========== */
+#hero-sec.bg-image {
+    background-image: linear-gradient(rgba(var(--black), var(--bg-opacity-65)), rgba(var(--black), var(--bg-opacity-65))), url(../img/bg.jpg);
+}
+#hero-sec ul li:has(i) {
+    width: calc(4.375rem / 2);
+    height: calc(4.375rem / 2);
+}
+
+/* ========== About ========== */
+#about .col-lg-5>div:has(img) {
+    z-index: 1;
+    position: relative;
+}
+#about .col-lg-5>div:has(img)::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    width: 80%;
+    height: 80%;
+    left: 0;
+    bottom: -30px;
+    z-index: -1;
+}
+#about .sec-title {--mb: 5px;}
+#about .sec-title::before {content: none;}
+#about .progress-group>.progress {
+    --bs-progress-bg: var(--bg-light-gray);
+    --bs-progress-bar-bg: var(--bg-darkish);
+    --bs-progress-height: 1.5rem;
+
+    margin: 0 0 1.875rem;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+#about .progress-group>.progress>.progress-bar {padding: 5px 10px;}
+
+/* ========== Services ========== */
+#services .row .card-item {
+    padding: 50px 20px;
+    border-radius: 5px;
+}
+#services .row .card-item .i-circle {
+    --width: 4.375rem;
+    --height: 4.375rem;
+}
+
+/* ========== Works ========== */
+#works .socials .i-circle {
+    --width: 1.875rem;
+    --height: 1.875rem;
+}
+#works .work-card .card-img{
+    position: relative;
+}
+#works .work-card>.card-img>.socials{
+    position: absolute;
+    inset: 5px;
+    transform: translatey(10px);
+    opacity: 0;
+    transition: var(--animation-duration) ease;
+}
+#works .work-card:hover .socials {
+    transform: translatey(0);
+    opacity: 1;
+}
+#works .work-card .socials>h6 {
+    transform: translatey(-15px);
+    transition: var(--animation-duration) ease;
+}
+#works .work-card .socials>ul {
+    transform: translatey(5px);
+    transition: var(--animation-duration) ease;
+}
+#works .work-card:hover .socials>h6,
+#works .work-card:hover .socials>ul {transform: translatey(0);}
+#works .nav-pills .nav-link,
+#works .nav-pills .nav-link.active {
+    color: var(--text-darkish-sub-2);
+    background-color: transparent;
+    position: relative;
+}
+#works .nav-pills .nav-link::before {
+    content: '';
+    position: absolute;
+    background-color: var(--text-darkish-sub-1);
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: calc(var(--animation-duration) - (var(--animation-duration) / 5)) ease;
+}
+#works .nav-pills .nav-link.active::before {
+    width: 95%;
+}
+
+#works .modal {
+    --bs-modal-bg: transparent;
+}
+#works .modal .modal-dialog {
+    --bs-modal-width: auto;
+}
+#works .modal-content {
+    width: fit-content;
+}
+#works figcaption {width: fit-content;}
+#works .modal {
+    /* position: relative; */
+}
+#works .carousel-control-prev {
+    position: absolute;
+    left: 0;
+
+}
+#works .carousel-control-next {
+    position: absolute;
+    right: 0;
+
+}
+
+/* ========== Clients ========== */
+#clients .carousel .carousel-item>div:has(img) {
+    max-width: 5.625rem;
+    max-height: 5.625rem;
+}
+#clients .carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--bg-gray);
+
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px 7px;
+    opacity: 0.3;
+}
+#clients .carousel .carousel-indicators [data-bs-target].active {opacity: 1;}
+
+/* ========== Numbers ========== */
+
+/* ========== Team ========== */
+#team .team-card .card-img{
+    position: relative;
+}
+#team .team-card .card-img .socials{
+    position: absolute;
+    inset: 5px;
+    transform: rotatey(180deg) scale(0.5);
+    opacity: 0;
+    transition: var(--animation-duration) ease;
+}
+#team .team-card:hover .card-img .socials {
+    transform: rotatey(0deg) scale(1);
+    opacity: 1;
+}
+#team .team-card .card-img div:has(img) img{
+    transition: calc(var(--animation-duration) - (var(--animation-duration) / 3)) ease;
+}
+#team .team-card .card-img:hover div:has(img) img{
+    transform: scale(1.2);
+}
+
+/* ========== Contact ========== */
+#contact form .form-control:focus {
+    box-shadow: none;
+    background-color: var(--bg-light-gray-sub);
+}
+#contact form textarea {
+    height: 160px;
+    max-height: 160px;
+    max-width: 100%;
+}
+
+/* ========== Footer ========== */
+
+/* ========== Media Query ========== */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    header .navbar {
+        --color: #fff;
+    }
+    header .navbar-nav {
+        position: initial;
+        background-color: initial;
+    }
+
+    header:has(.navbar>div>a:not(.active)) .navbar {
+        --color: #fff;
+    
+        --bs-navbar-brand-color: var(--color);
+        --bs-navbar-brand-hover-color: var(--color);
+    
+        transition: var(--animation-duration) ease;
+    }
+    header:has(.navbar>div>a:not(.active)) .navbar-dark {
+        --bs-navbar-active-color: var(--color);
+        --bs-navbar-color: var(--color);
+        --bs-navbar-hover-color: var(--color);
+    }
+    header:has(.navbar>div>a:not(.active)) .navbar-nav {
+        --bs-link-color: var(--color);
+        --bs-link-hover-color: var(--color);
+    }
+    header:has(.navbar>div>a:not(.active)) a.nav-link,
+    header:has(.navbar>div>a:not(.active)) a.nav-link.active {
+        color: var(--color);
+    }
+    header:has(.navbar>div>a:not(.active)) .nav-link::before {
+        background-color: var(--color);
+    }
+
+    header:has(.navbar>div>a.active) .navbar {
+        --color: var(--text-darkish-sub-1);
+    
+        --bs-navbar-brand-color: var(--text-darkish);
+        --bs-navbar-brand-hover-color: var(--text-darkish);
+    
+        background-color: #fff;
+        box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+        padding: 0 0 15px;
+    }
+    header:has(.navbar>div>a.active) .navbar-dark {
+        --bs-navbar-active-color: var(--color);
+        --bs-navbar-color: var(--color);
+        --bs-navbar-hover-color: var(--color);
+    }
+    header:has(.navbar>div>a.active) .navbar-nav {
+        --bs-link-color: var(--color);
+        --bs-link-hover-color: var(--color);
+    }
+    header:has(.navbar>div>a.active) a.nav-link,
+    header:has(.navbar>div>a.active) a.nav-link.active {
+        color: var(--color);
+    }
+    header:has(.navbar>div>a.active) .nav-link::before {
+        background-color: var(--color);
+    }
+}
+
+/* Large devices (Screens, 992px and up) */
+@media (min-width: 992px) { 
+    
+}

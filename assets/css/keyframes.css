@@ -1,0 +1,350 @@
+/* ========== keyframes for Hero Section ========== */
+#hero-sec h1 {
+    width: fit-content;
+    margin: auto;
+    /* text-wrap: nowrap; */
+    /* overflow: hidden; */
+    position: relative;
+    /* animation: jop_title_h1 24s infinite; */
+}
+#hero-sec h1 span {
+    /* animation: jop_title_span 24s infinite; */
+}
+#hero-sec h1::after {
+    content: '';
+    position: absolute;
+    background-color: var(--text-grayish-white);
+    width: 2px;
+    height: 70%;
+    top: 10%;
+    right: -8px;
+}
+#hero-sec h1 span>strong::before {
+    content: 'Larry Daniels';
+    /* text-wrap: nowrap; */
+    animation: jop_title 15s infinite;
+}
+@keyframes jop_title {
+    0% {content: 'Larry Daniels';}
+    21% {content: 'Larry Daniels';}
+    21.55% {content: 'Larry Daniel';}
+    22.09% {content: 'Larry Danie';}
+    22.64% {content: 'Larry Dani';}
+    23.18% {content: 'Larry Dan';}
+    23.73% {content: 'Larry Da';}
+    24.27% {content: 'Larry D';}
+    24.82% {content: 'Larry ';}
+    25.36% {content: 'Larry';}
+    25.91% {content: 'Larr';}
+    26.45% {content: 'Lar';}
+    27.00% {content: 'La';}
+    27.55% {content: 'L';}
+    28.09% {content: '';}
+    28.64% {content: 'D';}
+    29.18% {content: 'De';}
+    29.73% {content: 'Dev';}
+    30.27% {content: 'Deve';}
+    30.82% {content: 'Devel';}
+    31.36% {content: 'Develo';}
+    31.91% {content: 'Develop';}
+    32.45% {content: 'Develpe';}
+    33% {content: 'Developer';}
+    54% {content: 'Developer';}
+    54.71% {content: 'Develpe';}
+    55.41% {content: 'Develop';}
+    56.12% {content: 'Develo';}
+    56.82% {content: 'Devel';}
+    57.53% {content: 'Deve';}
+    58.24% {content: 'Dev';}
+    58.94% {content: 'De';}
+    59.65% {content: 'D';}
+    60.35% {content: '';}
+    61.06% {content: 'D';}
+    61.76% {content: 'De';}
+    62.47% {content: 'Des';}
+    63.18% {content: 'Desi';}
+    63.88% {content: 'Desig';}
+    64.59% {content: 'Design';}
+    65.29% {content: 'Designe';}
+    66% {content: 'Designer';}
+    87% {content: 'Designer';}
+    87.57% {content: 'Designe';}
+    88.14% {content: 'Design';}
+    88.71% {content: 'Desig';}
+    89.29% {content: 'Desi';}
+    89.86% {content: 'Des';}
+    90.43% {content: 'De';}
+    91.00% {content: 'D';}
+    91.57% {content: '';}
+    92.14% {content: 'L';}
+    92.71% {content: 'La';}
+    93.29% {content: 'Lar';}
+    93.86% {content: 'Larr';}
+    94.43% {content: 'Larry';}
+    95.00% {content: 'Larry ';}
+    95.57% {content: 'Larry D';}
+    96.14% {content: 'Larry Da';}
+    96.71% {content: 'Larry Dan';}
+    97.29% {content: 'Larry Dani';}
+    97.86% {content: 'Larry Danie';}
+    98.43% {content: 'Larry Daniel';}
+    99% {content: 'Larry Daniels';}
+    100% {content: 'Larry Daniels';}
+}
+@keyframes jop_title_span {
+    0% {transform: translatex(0);}
+    /* 21% {transform: translatex(0);} */
+    12% {transform: translatex(70%);}
+    33% {transform: translatex(0);}
+    /* 54% {transform: translatex(0);} */
+    55% {transform: translatex(70%);}
+    66% {transform: translatex(0);}
+    /* 87% {transform: translatex(0);} */
+    93% {transform: translatex(70%);}
+    /* 99% {transform: translatex(0);} */
+    100% {transform: translatex(0);}
+}
+@keyframes jop_title_h1 {
+    0% {transform: translatex(0);}
+    /* 21% {transform: translatex(0);} */
+    12% {transform: translatex(-35%);}
+    33% {transform: translatex(0);}
+    /* 54% {transform: translatex(0);} */
+    55% {transform: translatex(-35%);}
+    66% {transform: translatex(0);}
+    /* 87% {transform: translatex(0);} */
+    93% {transform: translatex(-35%);}
+    /* 99% {transform: translatex(0);} */
+    100% {transform: translatex(0);}
+}
+
+/* ========== keyframes for Numbers Section ========== */
+/* ========== Counter: Happy Customers ========== */
+#numbers .col-lg-3:nth-child(1)>p::before {
+    content: '850';
+}
+body[data-bs-spy="scroll"] #numbers .col-lg-3:nth-child(1)>p::before {
+    content: '850';
+    animation: counter_1 1s;
+}
+@keyframes counter_1 {
+    0% { content: '0'; }
+    2.86% { content: '1'; }
+    5.71% { content: '25'; }
+    8.57% { content: '50'; }
+    11.43% { content: '75'; }
+    14.29% { content: '100'; }
+    17.14% { content: '125'; }
+    20.00% { content: '150'; }
+    22.86% { content: '175'; }
+    25.71% { content: '200'; }
+    28.57% { content: '225'; }
+    31.43% { content: '250'; }
+    34.29% { content: '275'; }
+    37.14% { content: '300'; }
+    40.00% { content: '325'; }
+    42.86% { content: '350'; }
+    45.71% { content: '375'; }
+    48.57% { content: '400'; }
+    51.43% { content: '425'; }
+    54.29% { content: '450'; }
+    57.14% { content: '475'; }
+    60.00% { content: '500'; }
+    62.86% { content: '525'; }
+    65.71% { content: '550'; }
+    68.57% { content: '575'; }
+    71.43% { content: '600'; }
+    74.29% { content: '625'; }
+    77.14% { content: '650'; }
+    80.00% { content: '675'; }
+    82.86% { content: '700'; }
+    85.71% { content: '725'; }
+    88.57% { content: '750'; }
+    91.43% { content: '775'; }
+    94.29% { content: '800'; }
+    97.14% { content: '825'; }
+    100.00% { content: '850'; }
+}
+
+/* ========== Counter: YEARS OF EXPERIENCE ========== */
+#numbers .col-lg-3:nth-child(2)>p::before {
+    content: '230';
+}
+body[data-bs-spy="scroll"] #numbers .col-lg-3:nth-child(2)>p::before {
+    content: '230';
+    animation: counter_2 1s;
+}
+@keyframes counter_2{ 
+    0% { content: '0'; }
+    4.17% { content: '1'; }
+    8.33% { content: '10'; }
+    12.50% { content: '20'; }
+    16.67% { content: '30'; }
+    20.83% { content: '40'; }
+    25.00% { content: '50'; }
+    29.17% { content: '60'; }
+    33.33% { content: '70'; }
+    37.50% { content: '80'; }
+    41.67% { content: '90'; }
+    45.83% { content: '100'; }
+    50.00% { content: '110'; }
+    54.17% { content: '120'; }
+    58.33% { content: '130'; }
+    62.50% { content: '140'; }
+    66.67% { content: '150'; }
+    70.83% { content: '160'; }
+    75.00% { content: '170'; }
+    79.17% { content: '180'; }
+    83.33% { content: '190'; }
+    87.50% { content: '200'; }
+    91.67% { content: '210'; }
+    95.83% { content: '220'; }
+    100.00% { content: '230'; }
+}
+
+/* ========== Counter: TOTAL CLIENTS ========== */
+#numbers .col-lg-3:nth-child(3)>p::before {
+    content: '9450';
+}
+body[data-bs-spy="scroll"] #numbers .col-lg-3:nth-child(3)>p::before {
+    content: '9450';
+    animation: counter_3 1s;
+}
+@keyframes counter_3 {
+    0% { content: '0';}
+    1.04% { content: '1';}
+    2.08% { content: '100';}
+    3.13% { content: '200';}
+    4.17% { content: '300';}
+    5.21% { content: '400';}
+    6.25% { content: '500';}
+    7.29% { content: '600';}
+    8.33% { content: '700';}
+    9.38% { content: '800';}
+    10.42% { content: '900';}
+    11.46% { content: '1000';}
+    12.50% { content: '1100';}
+    13.54% { content: '1200';}
+    14.58% { content: '1300';}
+    15.63% { content: '1400';}
+    16.67% { content: '1500';}
+    17.71% { content: '1600';}
+    18.75% { content: '1700';}
+    19.79% { content: '1800';}
+    20.83% { content: '1900';}
+    21.88% { content: '2000';}
+    22.92% { content: '2100';}
+    23.96% { content: '2200';}
+    25.00% { content: '2300';}
+    26.04% { content: '2400';}
+    27.08% { content: '2500';}
+    28.13% { content: '2600';}
+    29.17% { content: '2700';}
+    30.21% { content: '2800';}
+    31.25% { content: '2900';}
+    32.29% { content: '3000';}
+    33.33% { content: '3100';}
+    34.38% { content: '3200';}
+    35.42% { content: '3300';}
+    36.46% { content: '3400';}
+    37.50% { content: '3500';}
+    38.54% { content: '3600';}
+    39.58% { content: '3700';}
+    40.63% { content: '3800';}
+    41.67% { content: '3900';}
+    42.71% { content: '4000';}
+    43.75% { content: '4100';}
+    44.79% { content: '4200';}
+    45.83% { content: '4300';}
+    46.88% { content: '4400';}
+    47.92% { content: '4500';}
+    48.96% { content: '4600';}
+    50.00% { content: '4700';}
+    51.04% { content: '4800';}
+    52.08% { content: '4900';}
+    53.13% { content: '5000';}
+    54.17% { content: '5100';}
+    55.21% { content: '5200';}
+    56.25% { content: '5300';}
+    57.29% { content: '5400';}
+    58.33% { content: '5500';}
+    59.38% { content: '5600';}
+    60.42% { content: '5700';}
+    61.46% { content: '5800';}
+    62.50% { content: '5900';}
+    63.54% { content: '6000';}
+    64.58% { content: '6100';}
+    65.63% { content: '6200';}
+    66.67% { content: '6300';}
+    67.71% { content: '6400';}
+    68.75% { content: '6500';}
+    69.79% { content: '6600';}
+    70.83% { content: '6700';}
+    71.88% { content: '6800';}
+    72.92% { content: '6900';}
+    73.96% { content: '7000';}
+    75.00% { content: '7100';}
+    76.04% { content: '7200';}
+    77.08% { content: '7300';}
+    78.12% { content: '7400';}
+    79.17% { content: '7500';}
+    80.21% { content: '7600';}
+    81.25% { content: '7700';}
+    82.29% { content: '7800';}
+    83.33% { content: '7900';}
+    84.37% { content: '8000';}
+    85.42% { content: '8100';}
+    86.46% { content: '8200';}
+    87.50% { content: '8300';}
+    88.54% { content: '8400';}
+    89.58% { content: '8500';}
+    90.62% { content: '8600';}
+    91.67% { content: '8700';}
+    92.71% { content: '8800';}
+    93.75% { content: '8900';}
+    94.79% { content: '9000';}
+    95.83% { content: '9100';}
+    96.87% { content: '9200';}
+    97.92% { content: '9300';}
+    98.96% { content: '9400';}
+    100.00% { content: '9450';}
+}
+
+/* ========== Counter: AWARD WON ========== */
+#numbers .col-lg-3:nth-child(4)>p::before {
+    content: '780';
+}
+body[data-bs-spy="scroll"] #numbers .col-lg-3:nth-child(4)>p::before {
+    content: '780';
+    animation: counter_4 1s;
+}
+@keyframes counter_4 {
+    0% { content: '0';}
+    3.70% { content: '1';}
+    7.41% { content: '30';}
+    11.11% { content: '60';}
+    14.81% { content: '90';}
+    18.52% { content: '120';}
+    22.22% { content: '150';}
+    25.93% { content: '180';}
+    29.63% { content: '210';}
+    33.33% { content: '240';}
+    37.04% { content: '270';}
+    40.74% { content: '300';}
+    44.44% { content: '330';}
+    48.15% { content: '360';}
+    51.85% { content: '390';}
+    55.56% { content: '420';}
+    59.26% { content: '450';}
+    62.96% { content: '480';}
+    66.67% { content: '510';}
+    70.37% { content: '540';}
+    74.07% { content: '570';}
+    77.78% { content: '600';}
+    81.48% { content: '630';}
+    85.19% { content: '660';}
+    88.89% { content: '690';}
+    92.59% { content: '720';}
+    96.30% { content: '750';}
+    100.00% { content: '780';}
+}
